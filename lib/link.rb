@@ -2,7 +2,7 @@ class Link
 
 	include DataMapper::Resource
 
-	attr_accessor :tag
+	# attr_accessor :tag
 
 	has n, :tags, :through => Resource
 
