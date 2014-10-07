@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bookmark manager</title>
+  <link rel="stylesheet" type="text/css" href="/css/application.css">  
+</head>
 <body>
-	<% if current_user %>
-		Welcome, <%= current_user.email %>
-	<% end %>
-	<%= yield %>
+  <% if current_user %>
+    Welcome, <%= current_user.email %>
+  <% end %>
+  <% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <%= yield %>
 </body>
+</html>

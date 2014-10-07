@@ -7,6 +7,7 @@ ENV["RACK_ENV"] = 'test' # because we need to know what database to work with
 require './server' 
 require 'database_cleaner'
 require 'capybara/rspec'
+# require 'rack-flash3'
 
 Capybara.app = Sinatra::Application
 
